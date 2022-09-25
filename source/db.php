@@ -119,13 +119,13 @@ function sendMail($email, $token) {
         $mail->CharSet = 'UTF-8';                                     //Send using SMTP
         $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'jungjung.now@gmail.com';                     //SMTP username
-        $mail->Password   = 'lwjdjuihsvejmvge';                               //SMTP password
+        $mail->Username   = 'your_mail';                     //SMTP username
+        $mail->Password   = 'smtp_password';                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
         $mail->Port       = 587;                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
         //Recipients
-        $mail->setFrom('jungjung.now@gmail.com', 'QTV meApp');
+        $mail->setFrom('your_mail', 'QTV meApp');
         $mail->addAddress($email, 'Receiver');     //Add a recipient
         /*$mail->addAddress('ellen@example.com');               //Name is optional
         $mail->addReplyTo('info@example.com', 'Information');
